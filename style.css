@@ -1,0 +1,191 @@
+body {
+    margin: 0;
+    font-family: Roboto sans-serif;
+}
+#preloader1, #preloader2, #preloader3 {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*блок со всем содержимым*/
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*блок с каталогом и избранным*/
+.filling {
+    width: 744px;
+}
+header {
+    display: flex;
+}
+/*кнопки в хедере*/
+.btnCatalog, .btnFavorites {
+    width: 372px;
+    height: 55px;
+    border: none;
+    background: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+}
+/*переключение кнопок*/
+.activeBtn {
+    color: #117DC1;
+    background: #EDF9FF;
+}
+.passiveBtn {
+    background: white;
+}
+/*классы для переключения Каталога и Избранного*/
+.active {
+    display: block;
+}
+.passive {
+    display: none;
+}
+.favorites {
+    display: flex;
+    flex-flow: wrap;
+}
+.oneFavoriteBlock{
+    margin-right: 42px;
+    margin-bottom: 42px;
+}
+
+
+
+/* скрываем чекбоксы и блоки с содержанием */
+.hide, .hide + label ~ div {
+    display: none;
+}
+/* вид текста label */
+.hide + label {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+label {
+    display: flex;
+    align-items: center;
+}
+/* вид текста label при активном переключателе */
+.hide:checked + label {
+    border-bottom: 0;
+}
+/* когда чекбокс активен показываем блоки с содержанием  */
+.hide:checked + label + div {
+    display: block;
+    margin-left: 20px;
+    padding: 10px;
+}
+.hide + label:before {
+    background-color: #117DC1;
+    color: #fff;
+    content: "\002B";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    font-size: 32px;
+    font-weight: bold;
+    height: 32px;
+    line-height: 16px;
+    margin: 3px 5px;
+    text-align: center;
+    width: 32px;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+/*меняем + на -*/
+.hide:checked + label:before {
+    content: "\2212";
+}
+
+
+
+/*блок под все фото*/
+.blockWithPhoto {
+    display: flex;
+    flex-wrap: wrap;
+}
+/*вид фото в избранном*/
+.photo {
+    height: 150px;
+    width: 150px;
+    cursor: pointer;
+}
+/*вид фото в каталоге*/
+.photoInCatalog {
+    height: 150px;
+    width: 150px;
+    cursor: pointer;
+    margin-bottom: 42px;
+    margin-right: 42px;
+}
+/*вид кнопки добавления в избранное*/
+.star {
+    float: right;
+    margin-right: 8px;
+    margin-top: 8px;
+    height: 32px;
+    width: 32px;
+}
+.oneFavoriteBlock {
+    color: rgba(120, 120, 120, 1);
+    height: 249px;
+    width: 150px;
+}
+.empty {
+    margin-top: 206px;
+    text-align: center;
+}
+.imgError{
+    text-align: center;
+}
+
+
+
+
+/* фон модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+/* Модальное окно */
+.modal-content {
+    height: 600px;
+    width: 600px;
+    padding-top: 64px;
+    margin: auto;
+}
+/*картинка в модальном окне*/
+.modal-content img {
+    height: 600px;
+    width: 600px;
+}
+/* Кнопка закрытия */
+.close {
+    color: white;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 1088px;
+    top: 32px;
+    font-size: 42px;
+    font-weight: bold;
+}
+/*кнопка при наведении и фокусе*/
+.close:hover, .close:focus {
+    color: #117DC1;
+    text-decoration: none;
+    cursor: pointer;
+}
+

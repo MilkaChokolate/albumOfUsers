@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <button class="btnCatalog activeBtn" onclick="clickOnBtn('.catalog', '.favorites', '.btnCatalog', '.btnFavorites')"><h1>Каталог</h1></button>
+        <button class="btnFavorites passiveBtn" onclick="clickOnBtn('.favorites', '.catalog','.btnFavorites','.btnCatalog'), downloadBlockFavorites()"><h1>Избранное</h1></button>
+    </header>
+    <div class="filling">
+        <div class="catalog active">
+            <div class="users">
+                <div class="preloader"><img src="loader.gif"></div>
+
+            </div>
+        </div>
+        <div class="favorites passive">
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
